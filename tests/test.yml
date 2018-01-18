@@ -1,0 +1,9 @@
+---
+- name: Test playbook for running on Travis CI
+  hosts: all
+  become: True
+  vars:
+    gitlab_restart_handler_failed_when: false
+  roles:
+    - gitlab
+    - docker
