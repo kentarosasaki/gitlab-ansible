@@ -19,7 +19,11 @@
   retries: 5
   delay: 2
   with_items:
+    - openssh-server
     - postfix
+    - curl
+    - openssl
+    - tzdata
 
 - name: Download GitLab repository installation script.
   get_url:
